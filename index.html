@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Task List</title>
+   <link rel="stylesheet" href="css/icon.css">
+   <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+   <header>
+      <h1>Task List</h1>
+      <form id="new-task-form">
+         <input type="text" id="new-task-input" placeholder="Add a task">
+         <input type="submit" id="new-task-submit" value="Add Task">
+      </form>
+   </header>
+
+   <main>
+      <conteiner>
+         <div class="not-completed">
+            <h2>Not Completed</h2>
+
+            <div id="tasks_not-completed">
+            </div>
+         </div>
+         <div class="completed">
+            <h2>Completed</h2>
+            <div id="tasks-completed">
+            </div>
+         </div>
+      </conteiner>
+   </main>
+   <div class="form-toggle">
+      <div class="form-toggle-item item-1">
+         <input id="fid-1" type="radio" name="radio" value="off" data-color="./images/01.jpg">
+         <label for="fid-1" data-one>OFF</label>
+      </div>
+      <div class="form-toggle-item item-2">
+         <input id="fid-2" type="radio" name="radio" value="on" data-color="./images/02.jpg">
+         <label for="fid-2" data-two>ON</label>
+      </div>
+   </div>
+   <script src="main.js"></script>
+
+</body>
+
+</html>
