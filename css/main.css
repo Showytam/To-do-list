@@ -1,257 +1,339 @@
 * {
-   box-sizing: border-box;
-   margin: 0;
-   font-family: "Fira sans", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Fira sans', sans-serif;
+}
+
+html,
+body {
+  min-height: 100vh;
 }
 
 body {
-   display: flex;
-   flex-direction: column;
-   min-height: 100vh;
-   background: url(../images/02.jpg);
-   background-size: cover;
-   background-repeat: no-repeat;
-   color: white;
+  display: flex;
+  flex-direction: column;
+  background: url(../images/02.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
 }
 
 .icon-bin2 {
-   color: rgb(114, 0, 0);
-   font-size: 1.2rem;
-   opacity: 0.9;
-   filter: brightness(1.5);
+  color: rgb(114, 0, 0);
+  font-size: 1.2rem;
+  opacity: 0.9;
+  filter: brightness(1.5);
 }
 
 .icon-bin2:hover {
-   opacity: 1;
-   transition: 0.1s;
-   transform: scale(1.1);
+  opacity: 1;
+  transition: 0.1s;
+  transform: scale(1.1);
 }
 
 .icon-bin2:active {
-   opacity: 0.6;
+  opacity: 0.6;
 }
 
 header {
-   padding: 2rem 1rem;
-   max-width: 650px;
-   width: 100%;
-   margin: 0 auto;
+  padding: 2rem 1rem;
+  max-width: 650px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 header h1 {
-   color: rgb(184, 52, 74);
-   font-size: 2rem;
-   font-weight: 300;
-   color: #0b87a9;
-   margin-bottom: 1rem;
+  color: rgb(184, 52, 74);
+  font-size: 2rem;
+  font-weight: 300;
+  color: #0b87a9;
+  margin-bottom: 1rem;
 }
 
 #new-task-form {
-   display: flex;
+  display: flex;
 }
 
 input,
 button {
-   appearance: none;
-   border: none;
-   outline: none;
-   background: none;
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
 }
 
 #new-task-input {
-   flex: 1 1 0%;
-   background-color: #1a2433;
-   padding: 1rem;
-   border-radius: 1rem;
-   margin-right: 1rem;
-   color: #eee;
-   font-size: 1.25rem;
+  flex: 1 1 0%;
+  background-color: #1a2433;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-right: 1rem;
+  color: #eee;
+  font-size: 1.25rem;
 }
 
 #new-task-input::placeholder {
-   color: grey;
+  color: grey;
 }
 
 #new-task-submit {
-   color: rgb(184, 52, 74);
-   font-size: 1.25rem;
-   font-weight: 700;
-   background-image: linear-gradient(to right, rgb(202, 58, 82), purple);
-   -webkit-background-clip: text;
-   background-clip: text;
-   -webkit-text-fill-color: transparent;
-   color: transparent;
-   cursor: pointer;
-   opacity: 0.7;
-   transition: 0.4s;
+  color: rgb(184, 52, 74);
+  font-size: 1.25rem;
+  font-weight: 700;
+  background-image: linear-gradient(to right, rgb(202, 58, 82), purple);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: 0.4s;
 }
 
 #new-task-submit:hover {
-   opacity: 1;
-   transition: 0.5s;
-   transform: scale(1.1);
+  opacity: 1;
+  transition: 0.5s;
+  transform: scale(1.1);
 }
 
 #new-task-submit:active {
-   opacity: 0.6;
+  opacity: 0.6;
 }
 
 main {
-   flex: 1 1 0%;
-   padding: 0.2rem 1rem;
-   max-width: 650px;
-   width: 100%;
-   margin: 0 auto;
+  flex: 1 1 0%;
+  padding: 0.2rem 1rem;
+  max-width: 650px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .not-completed h2 {
-   font-size: 1.5rem;
-   font-weight: 400;
-   color: #0b87a9;
-   margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #0b87a9;
+  margin-bottom: 1rem;
 }
 
 .completed h2 {
-   font-size: 1.5rem;
-   font-weight: 400;
-   color: #0b87a9;
-   margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #0b87a9;
+  margin-bottom: 1rem;
 }
 
 @keyframes ani {
-   0% {
-      transform: translateX(-25%);
-   }
-   100% {
-      transform: translateX(0);
-   }
+  0% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 #tasks_not-completed .task {
-   display: flex;
-   justify-content: space-between;
-   background-color: #111827;
-   padding: 1rem 1rem 1rem 2rem;
-   border-radius: 1rem;
-   margin-bottom: 1rem;
-   transform: translateX(-25%);
-   animation: ani 1.3s forwards;
+  display: flex;
+  justify-content: space-between;
+  background-color: #111827;
+  padding: 1rem 1rem 1rem 2rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  transform: translateX(-25%);
+  animation: ani 1.3s forwards;
 }
 
 #tasks-completed .task {
-   display: flex;
-   justify-content: space-between;
-   background-color: #111827;
-   opacity: 0.6;
-   padding: 1rem 1rem 1rem 2rem;
-   border-radius: 1rem;
-   margin-bottom: 1rem;
-   transform: translateY(-35%);
-   animation: ani 1.3s forwards;
+  display: flex;
+  justify-content: space-between;
+  background-color: #111827;
+  opacity: 0.6;
+  padding: 1rem 1rem 1rem 2rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  transform: translateY(-35%);
+  animation: ani 1.3s forwards;
 }
 
 #tasks_not-completed .task .content {
-   flex: 1 1 0%;
+  flex: 1 1 0%;
 }
 
 #tasks-completed .task .content {
-   flex: 1 1 0%;
+  flex: 1 1 0%;
 }
 
 #tasks_not-completed .task .content .text {
-   color: rgb(167, 167, 167);
-   font-size: 1.25rem;
-   width: 100%;
-   display: block;
-   transition: 0.4s;
+  color: rgb(167, 167, 167);
+  font-size: 1.25rem;
+  width: 100%;
+  display: block;
+  transition: 0.4s;
 }
 
 #tasks-completed .task .content .text {
-   color: rgb(167, 167, 167);
-   font-size: 1.25rem;
-   width: 100%;
-   display: block;
-   transition: 0.4s;
+  color: rgb(167, 167, 167);
+  font-size: 1.25rem;
+  width: 100%;
+  display: block;
+  transition: 0.4s;
 }
 
 #tasks_not-completed .task .content .text:not(:read-only) {
-   color: rgb(150, 20, 91);
+  color: rgb(150, 20, 91);
 }
 
 #tasks-completed .task .content .text:not(:read-only) {
-   color: rgb(150, 20, 91);
+  color: rgb(150, 20, 91);
 }
 
 #tasks_not-completed .task .actions {
-   display: flex;
-   margin: 0 0.5rem;
+  display: flex;
+  margin: 0 0.5rem;
 }
 
 #tasks-completed .task .actions {
-   display: flex;
-   margin: 0 0.5rem;
+  display: flex;
+  margin: 0 0.5rem;
 }
 
 .task .actions button {
-   cursor: pointer;
-   margin: 0 0.5rem;
-   font-size: 1.25rem;
-   font-weight: 700;
-   opacity: 0.6;
-   text-transform: uppercase;
-   transition: 0.4s;
+  cursor: pointer;
+  margin: 0 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  opacity: 0.6;
+  text-transform: uppercase;
+  transition: 0.4s;
 }
 
 .task .actions button:hover {
-   opacity: 1;
-   transition: 0.8s;
-   transform: scale(1.1);
+  opacity: 1;
+  transition: 0.8s;
+  transform: scale(1.1);
 }
 
 .task .actions button:active {
-   opacity: 0.6;
+  opacity: 0.6;
 }
 
 .task .actions .edit {
-   background-image: linear-gradient(to right, rgb(202, 58, 82), purple);
-   -webkit-background-clip: text;
-   background-clip: text;
-   -webkit-text-fill-color: transparent;
-   color: transparent;
-   transition: 0.8s;
+  background-image: linear-gradient(to right, rgb(202, 58, 82), purple);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  transition: 0.8s;
 }
 
 .form-toggle {
-   display: inline-block;
-   overflow: hidden;
-   padding: 1rem;
+  display: inline-block;
+  overflow: hidden;
+  padding: 1rem;
 }
 .form-toggle-item {
-   display: inline-block;
+  display: inline-block;
 }
-.form-toggle-item input[type="radio"] {
-   display: none;
+.form-toggle-item input[type='radio'] {
+  display: none;
 }
 .form-toggle-item label {
-   display: inline-block;
-   padding: 0 1rem;
-   line-height: 2rem;
-   border: 1px solid #999;
-   border-right: none;
-   cursor: pointer;
-   user-select: none;
+  display: inline-block;
+  padding: 0 1rem;
+  line-height: 2rem;
+  border: 1px solid #999;
+  border-right: none;
+  cursor: pointer;
+  user-select: none;
 }
 
 .form-toggle .item-1 label {
-   border-radius: 0.4rem 0 0 0.4rem;
+  border-radius: 0.4rem 0 0 0.4rem;
 }
 .form-toggle .item-2 label {
-   border-radius: 0 0.4rem 0.4rem 0;
-   border-right: 1px solid #999;
+  border-radius: 0 0.4rem 0.4rem 0;
+  border-right: 1px solid #999;
 }
 
-.form-toggle .item-1 input[type="radio"]:checked + label {
-   background: #1c1c1d;
+.form-toggle .item-1 input[type='radio']:checked + label {
+  background: #1c1c1d;
 }
-.form-toggle .item-2 input[type="radio"]:checked + label {
-   background: #15273f;
+.form-toggle .item-2 input[type='radio']:checked + label {
+  background: #15273f;
+}
+
+@media (max-width: 750px) {
+  header {
+  max-width: 720px;
+    padding: 1.5rem 1rem;
+  }
+
+  .icon-bin2 {
+    font-size: 1rem;
+  }
+
+  .task .actions .edit {
+    font-size: 1rem;
+  }
+
+  #new-task-input {
+    flex: auto;
+    margin-right: 40px;
+    font-size: 1rem;
+  }
+
+  #new-task-submit {
+    font-size: 1rem;
+    position: absolute;
+    right: 70px;
+    top: 83px;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .completed h2,
+  .not-completed h2 {
+    font-size: 1.2rem;
+  }
+
+  #tasks_not-completed .task {
+    max-width: 600px;
+    width: 100%;
+    margin-right: 40px;
+    padding: 0.8rem 0.8rem 0.8rem 0.8rem;
+  margin: 0 auto;
+  }
+
+  #tasks-completed .task {
+    max-width: 600px;
+    width: 100%;
+    margin-right: 40px;
+    padding: 0.8rem 0.8rem 0.8rem 0.8rem;
+  }
+
+  #tasks_not-completed .task .content {
+    flex: auto;
+  }
+
+  #tasks-completed .task .content {
+    flex: auto;
+  }
+
+  #tasks_not-completed .task .content .text {
+    font-size: 1rem;
+  }
+
+  #tasks-completed .task .content .text {
+    font-size: 1rem;
+  }
+
+  .form-toggle-item label {
+    display: inline-block;
+    padding: 0 0.6rem;
+    line-height: 1.5rem;
+    border: 1px solid #999;
+    border-right: none;
+    cursor: pointer;
+    user-select: none;
+  }
 }
