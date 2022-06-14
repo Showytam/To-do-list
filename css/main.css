@@ -302,6 +302,7 @@ main {
     margin-right: 40px;
     padding: 0.8rem 0.8rem 0.8rem 0.8rem;
   margin: 0 auto;
+  margin-bottom: 10px;
   }
 
   #tasks-completed .task {
